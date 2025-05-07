@@ -1,0 +1,192 @@
+.sansation-regular {
+    font-family: "Sansation", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+  
+.sansation-bold {
+    font-family: "Sansation", sans-serif;
+    font-weight: 700;
+    font-style: normal;
+}
+  
+body{
+    background: url('https://picsum.photos/seed/picsum/1200/800?grayscale&blur=1') no-repeat center center/cover;
+    font-family: "Sansation", sans-serif;
+}
+
+#overlay{
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%;
+    height: 100%;
+    backdrop-filter: blur(6px);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 2;
+}
+
+#modal{
+        background: white;
+        padding: 50px;
+        border-radius: 12px;
+        box-shadow: 0 0 20px rgba(0,0,0,0.3);
+        max-width: 600px;
+        max-height: 600px;
+        display: none;
+        z-index: 3;
+}
+
+.container-modal{
+    margin-left: -20px;
+}
+
+h2#h2-modal{
+    position: relative;
+    text-align: center;
+}
+
+button#button-modal{
+    position: fixed;
+    right: 50px;
+    top: 50px;
+    width: 30px;
+    height: 30px;
+    border: 1px solid rgba(150, 150, 150, 0.5);
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: rgba(235, 0, 0);
+    color: black;
+    transition: all 0.5s ease;
+}
+
+button#button-modal:hover{
+    background-color: red;
+    color: white;
+}
+
+#container{
+    max-width: 40%;
+    margin: 100px auto;
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+h2{
+    text-align: center;
+    color: #333;
+    font-size: xx-large;
+    margin-top: -3px;
+}
+
+label{
+    display: block;
+}
+
+input#nombreHabito{
+    margin-bottom: -10px;
+}
+
+input, select{
+    margin: 15px 0px;
+    font-size: 16px;
+}
+
+input{
+    width: 250px;
+}
+
+button.submit{
+    background-color: #2ecc71;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+    font-size: 15px;
+    margin-top: -10px;
+    transition: all 0.5s ease;
+}
+
+button.submit:hover{
+    background-color: #219b54;
+}
+
+#container-lista{
+    max-width: 70%;
+    margin: 100px auto;
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+
+ul{
+    list-style: none;
+    padding: 0;
+    margin-top: 20px;
+}
+
+li{
+    background-color: beige;
+    padding: 10px;
+    margin: 10px;
+    border-radius: 5px;
+    border: 1px rgba(128, 128, 128, 0.3) solid;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+
+li.completed {
+    color: #2ecc71;
+  }
+
+button#buttonRed{
+    background-color: rgb(235, 61, 61);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+    font-size: 15px;
+    transition: all 0.5s ease;
+    width: 30px;
+    height: 30px;
+}
+
+button#buttonRed:hover{
+    background-color: rgb(185, 39, 39);
+}
+
+button#buttonGreen{
+    background-color: #2ecc71;
+    padding: 5px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    color: white;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    right: 300px;
+    transition: all 0.5s ease;
+    z-index: 1;
+}
+
+button#buttonGreen:hover{
+    background-color: #219b54;
+}
+
+.error{
+    margin-top: 5px;
+    color: red;
+    font-size: 13px;
+}
+
+#errorCategoria, #errorDescripcion{
+    margin-top: -10px;
+}

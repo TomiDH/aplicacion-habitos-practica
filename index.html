@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Habits</title>
+
+    <link rel="stylesheet" href="estilo-pagina-habitos.css">
+    <link rel="shortcut icon" href="imagen-habitos.ico" type="image/x-icon">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sansation:wght@400;700&display=swap"
+    rel="stylesheet">
+    
+</head>
+<body>
+
+    <div id="overlay">
+        <div id="modal">
+            <h2 id="h2-modal"></h2>
+            <div class="container-modal">
+               <button id="button-modal" onclick="closePopUp()">X</button>
+                <p id="p1-modal"></p>
+                <p id="p2-modal"></p> 
+            </div>
+        </div>
+    </div>
+    
+    <div id="container">
+        <h2>🧠 Diario de Habitos</h2>
+        <form id="formulario" novalidate>
+            <label for="nombreHabito">Nombre del Habito:</label>
+            <input type="text" id="nombreHabito" name="nombreHabito" minlength="3" maxlength="20" required placeholder="Nuevo Habito..." autocomplete="off">
+            <div class="error" id="errorNombre"></div>
+            <br>
+
+            <label for="descripcionHabito">Descripcion:</label>
+            <input type="text" id="descripcionHabito" name="descripcionHabito" maxlength="80" required placeholder="Descripcion..." autocomplete="off">
+            <div class="error" id="errorDescripcion"></div>
+            <br>
+
+            <label for="categoriaHabito">Categoria del Habito:</label>
+            <select name="categoriaHabito" id="categoriaHabito" required>
+                <option value="">Seleccione...</option>
+                <option value="Bienestar">Bienestar</option>
+                <option value="Personal">Personal</option>
+                <option value="Aprendizaje">Aprendizaje</option>
+                <option value="Laboral">Laboral</option>
+            </select>
+            <div class="error" id="errorCategoria"></div>
+            <br>
+
+            <button type="submit" class="submit">Agregar</button>
+        </form>
+    </div>
+
+    <div id="container-lista">
+        <h2>Lista de Habitos:</h2>
+        <ul id="lista-habito"></ul>
+    </div>
+
+    <script src="guion.js"></script>
+</body>
+</html>
